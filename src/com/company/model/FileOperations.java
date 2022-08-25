@@ -148,6 +148,10 @@ public class FileOperations extends Component {
         for (int i=0;i<invoiceHeaders.size();i++){
             for(int j=0;j<invoiceHeaders.get(i).getInvoiceLines().size();j++){
                 String s="";
+                s=invoiceHeaders.get(i).getInvoiceNum()+",";
+                fo2.write(s.getBytes());
+                
+                s="";
                 s=invoiceHeaders.get(i).getInvoiceLines().get(j).getItemName()+",";
                 fo2.write(s.getBytes());
                 s="";
